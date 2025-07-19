@@ -217,12 +217,20 @@ input[type="submit"]:active {
     font-weight: bold;
 }
 
-.infobox {
+.block {
     display: flex;
-    gap: 5px;
-    padding: 5px;
-    align-items: center;
-    font-weight: bold;
+    justify-content: center;
+}
+
+.socialdiv {
+    width: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.social {
+    width: 45px;
+    height: auto;
 }
 
 #menu {
@@ -332,12 +340,6 @@ input[type="submit"]:active {
         width: 50%;
     }
 
-    .dishes {
-        display: flex;
-        flex-flow: wrap column;
-        align-items: center;
-    }
-
     #menu {
         grid-template-rows: 1fr; 
         gap: 10px;
@@ -354,11 +356,6 @@ input[type="submit"]:active {
         text-align: center;
     }
 
-    .button2 {
-        font-size: 1.25rem;
-        text-align: left;
-    }
-
     .filters {
         justify-content: start;
     }
@@ -373,19 +370,18 @@ input[type="submit"]:active {
         grid-row: 1;
     }
 
-    #logo1 {
-        width: 50%;
+    .social {
+        width: 30px;
     }
 
-    #contactsection {
-        display: flex;
-        flex-flow: column;
-        width: 100%;
+    .student {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     /** menu **/
 
-    .navigation2, .navigation3 {
+    .navigation {
         display: none;
     }
 
