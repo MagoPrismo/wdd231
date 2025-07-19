@@ -160,9 +160,9 @@ hr {
 }
 
 .navigation a:hover,
-.avigation a:active, 
-input[type="submit"]:hover,
-input[type="submit"]:active {
+.avigation a:active,
+.button2 a:hover,
+.button2 a:active {
     color: var(--color1);
     background-color:rgb(255, 255, 255);
     transition: background-color 0.5s ease;
@@ -193,7 +193,6 @@ input[type="submit"]:active {
 
 .web {
     display: flex;
-
 }
 
 .title {
@@ -231,6 +230,32 @@ input[type="submit"]:active {
 .social {
     width: 45px;
     height: auto;
+}
+
+/** cards **/
+
+.button2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card, .filter {
+
+    background-color: var(--color1);
+    color:rgb(255, 255, 255);
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+#completed {
+    background-color: green;
 }
 
 #menu {
