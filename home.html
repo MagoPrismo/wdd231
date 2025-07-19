@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Silas Gomes - Contact page: This is a page for users make a reservation or get in touch with the restaurant.">
+    <meta name="author"  content="silas gomes neto">
+    <!---fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--the order matters-->
+    <link rel="stylesheet" href="styles/style.css">
+    <!--js-->
+    <script src="scripts/date.js" defer></script>
+</head>
+<body>
+    <header id="menu">
+        <img id="logo" src="images/logo.jpeg" alt="logo">
+        <div id="humbutton">
+            <h1 id="title">Site Name</h1>
+            <a id="hidden-menu" href="#"></a>
+        </div>
+        <nav class="navigation">
+            <a class="button" id="home" href="#">Home</a>
+            <a class="button" id="chamber" href="#">Chamber</a>
+            <a class="button" id="final" href="#">Final</a> 
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <div class="student">
+            <section class="aboutme">
+                <h2 class="title">About Me</h2>
+                <p id="pAM">Silas Gomes Neto, a dedicated and insightful student, bridges continents and disciplines in his 
+                    pursuit of knowledge. Hailing from Brasília, Brazil, Silas embodies a unique blend of scientific curiosity 
+                    and technological prowess. 
+                    <br><br>
+                    Currently, he is immersed in the rigorous world of Physics at the University of 
+                    Brasília (UnB), where he delves into the fundamental laws governing the universe. This academic journey has 
+                    honed his analytical thinking, problem-solving skills, and a deep appreciation for complex systems.</p>
+            </section>
+            <section class="photo">
+                <h2 class="title">Student Photo</h2>
+                <img src="images/profile.jfif" id="student-photo">
+            </section>
+        </div>
+        <section class="web">
+            <h2 class="title" id="web">Web Certificate Courses</h2>
+            <p id="pAM">Text</p>
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <a id="git" href="#">GitHub</a>
+            <a id="git" href="#">GitHub</a>
+            <a id="git" href="#">GitHub</a>
+        </div>
+        <p id="foot">&copy; <span id="year"></span> | Silas Gomes | Brazil</p>
+        <p id="date">Last update:&nbsp;<span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
