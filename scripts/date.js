@@ -105,14 +105,21 @@ const courses = [
     }
 ]
 
-createcardcourse(courses);
 
-function createcardcourse(courses) {
+//////////
+
+let credits = 0; 
+
+function createcardcourse(coursesToDisplay) { // Renomeado para maior clareza
     document.querySelector(".courses").innerHTML = "";
-    courses.forEach(course => {
+    
+    // Resetar os créditos antes de renderizar os novos cartões
+    credits = 0; 
+
+    coursesToDisplay.forEach(course => {
         let card = document.createElement('div');
         let name = document.createElement('h3');
-        let completed = course.completed
+        let completed = course.completed;
 
         name.textContent = course.subject + course.number;
         card.setAttribute('class', "card");
@@ -124,25 +131,36 @@ function createcardcourse(courses) {
         }
 
         document.querySelector(".courses").appendChild(card);
-    })
-}
+    });
 
-//filters
+    credits = coursesToDisplay.reduce((totalCredits, course) => {
+        if (course.completed) {
+            return totalCredits + 2; 
+        }
+        return totalCredits; 
+    }, 0); 
+
+    const creditDisplay = document.querySelector('#credit');
+    if (creditDisplay) { 
+        creditDisplay.textContent = credits;
+    }
+}
 
 const Allbutton = document.querySelector('#all');
 const CSEbutton = document.querySelector('#cse');
 const WDDbutton = document.querySelector('#wdd');
 
 Allbutton.addEventListener('click', () => {
-    createcardcourse(courses);
-})
+    createcardcourse(courses); 
+});
 
 CSEbutton.addEventListener('click', () => {
     let subjects = courses.filter(course => course.subject === "CSE");
     createcardcourse(subjects);
-})
+});
 
 WDDbutton.addEventListener('click', () => {
+
     let subjects = courses.filter(course => course.subject === "WDD");
     createcardcourse(subjects);
-})
+});
