@@ -7,9 +7,9 @@
 }
 
 :root {
-    --color1: #0E7B75;
+    --color1: #093070;
     --color2: #1FB261;
-    --color3: #FFCA2C;
+    --color3: #ffca2c;
     --roboto: "Roboto", sans-serif;
     --open-sans: "Open Sans, sans-serif";
     /* mobile view */
@@ -60,6 +60,7 @@ header {
     align-items: center;
     justify-content: center; 
     color: white;
+    border-bottom: 5px solid var(--color3);
     padding: var(--pad15);
     margin: 50px;
     width: 100%;
@@ -77,7 +78,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: var(--pad10);
-    border-top: 5px solid black;
+    border-top: 5px solid var(--color3);
 }
 
 /** elements **/
@@ -117,52 +118,14 @@ a {
     text-align: center;
 }
 
-form, #contactinfo {
-    margin: 10px;
-    padding: 15px;
-    background-color:rgba(255, 255, 255, 0.5);
-    color:rgb(0, 0, 0);
-    border-radius: 6px;
-}
-
-textarea {
-    display: block;
-    width: 90%;
-    margin: 10px;
-    border-radius: 6px;
-    justify-self: center;
-}
-
-input[type="submit"] {
-    width: 40%;
-    height: auto;
-    padding: 2% 2%;
-    background-color: var(--color1);
-    cursor: pointer;
-    font-size: 0.9rem;
-    display: block;
-    text-align: center;
-    justify-self: center;
-    color:rgb(255, 255, 255);
-}
-
 hr {
     margin: 1rem;
 }
 
 /** blocks **/
 
-.content {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: var(--pad15);
-    gap: 5px;
-}
-
 .navigation a:hover,
-.avigation a:active,
-.button2 a:hover,
-.button2 a:active {
+.avigation a:active {
     color: var(--color1);
     background-color:rgb(255, 255, 255);
     transition: background-color 0.5s ease;
@@ -173,22 +136,6 @@ hr {
     grid-column: 1 /span 2; 
     display: flex;
     align-items: center;
-}
-
-.student {
-    display: grid;
-    grid-template: 1fr / .6fr .4fr;
-    gap: 5px;
-}   
-
-.aboutme, .photo, .web {
-    display: flex;
-    flex-flow: column;
-}
-
-.photo {
-    background-color:rgba(0, 0, 0, 0.062);
-    border-radius: 6px;
 }
 
 .web {
@@ -217,27 +164,37 @@ hr {
 }
 
 .block {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .socialdiv {
-    width: 30%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
 }
 
 .social {
-    width: 45px;
+    width: 50px;
     height: auto;
 }
 
-/** cards **/
-
-.button2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.foot {
+    font-family: var(--roboto);
+    font-size: var(--b);
 }
+
+.contact {
+    text-align: start;
+    padding: 15px;
+}
+
+.student {
+    text-align: end;
+    padding: 15px;
+}
+
+/** cards **/
 
 .courses {
     display: grid;
@@ -254,8 +211,8 @@ hr {
     border-radius: 6px;
 }
 
-#completed {
-    background-color: green;
+#yellow {
+    color: var(--color3);
 }
 
 #menu {
@@ -265,7 +222,6 @@ hr {
     grid-template: 0.5fr 0.5fr / 0.2fr 0.8fr;
     align-items: center;
     gap: 10px;
-    border-bottom: 5px solid black;
 }
 
 #hidden-menu {
@@ -279,36 +235,10 @@ hr {
     justify-self: center;
 }
 
-#student-photo {
-    width: 200px;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-#pAM {
-    padding: 10px;
-    background-color:rgba(0, 0, 0, 0.062);
-    border-radius: 6px;
-}
-
-#web {
-    display: block;
-    width: 100%;
-}
-
 #hero {
     display: block;
     width: 90%;
     height:auto;
-}
-
-#foot, #date {
-    font-family: var(--roboto);
-    font-size: var(--b);
-}
-
-.infobox img {
-    width: 6%;
 }
 
 #sociallinks img {
@@ -343,11 +273,6 @@ hr {
     font-size: small;
     padding: 1%;
     align-self: center;
-}
-
-#final {
-    color: white;
-    gap: 5px;
 }
 
 #istock {
@@ -385,6 +310,15 @@ hr {
         justify-content: start;
     }
 
+    .block {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .student, .contact {
+        text-align: start;
+    }
+
     #hidden-menu {
         display: flex;
     }
@@ -393,15 +327,6 @@ hr {
         width: 100%;
         height: auto;
         grid-row: 1;
-    }
-
-    .social {
-        width: 30px;
-    }
-
-    .student {
-        display: grid;
-        grid-template-columns: 1fr;
     }
 
     /** menu **/
@@ -429,9 +354,8 @@ hr {
 
 
     .show {
-        display: block;
-        margin: 0 auto;
-        text-align: center;
+        display: flex;
+        flex-flow: column;
     }
 
 }
