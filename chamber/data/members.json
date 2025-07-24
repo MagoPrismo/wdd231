@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Tech Innovators Inc.",
+    "address": "123 Inovação St, Cidade Tech, SP",
+    "phone": "(11) 98765-4321",
+    "website": "https://www.techinnovators.com",
+    "image": "tech-innovators.png",
+    "membershipLevel": 3,
+    "description": "Líder em soluções de software e hardware de ponta."
+  },
+  {
+    "name": "Global Logistics Solutions",
+    "address": "456 Logística Av, Porto Seguro, RJ",
+    "phone": "(21) 12345-6789",
+    "website": "https://www.globallogistics.com.br",
+    "image": "global-logistics.png",
+    "membershipLevel": 2,
+    "description": "Especialistas em transporte e cadeia de suprimentos global."
+  },
+  {
+    "name": "Healthy Bites Cafe",
+    "address": "789 Sabor R, Vila Verde, MG",
+    "phone": "(31) 55555-4444",
+    "website": "https://www.healthybites.com",
+    "image": "healthy-bites.png",
+    "membershipLevel": 1,
+    "description": "Café com opções saudáveis e orgânicas para todos."
+  },
+  {
+    "name": "Creative Design Studio",
+    "address": "101 Arte Blvd, Centro Criativo, RS",
+    "phone": "(51) 33333-2222",
+    "website": "https://www.creativedesign.com",
+    "image": "creative-design.png",
+    "membershipLevel": 3,
+    "description": "Agência de design gráfico e web com foco em inovação."
+  },
+  {
+    "name": "Eco-Friendly Products Ltd.",
+    "address": "202 Sustentável Rd, Natureza Viva, PR",
+    "phone": "(41) 77777-8888",
+    "website": "https://www.ecofriendly.com.br",
+    "image": "eco-friendly.png",
+    "membershipLevel": 2,
+    "description": "Fabricante de produtos sustentáveis e ecológicos."
+  },
+  {
+    "name": "Local Farm Fresh",
+    "address": "303 Campo Av, Fazenda Grande, BA",
+    "phone": "(71) 99999-1111",
+    "website": "https://www.localfarmfresh.com",
+    "image": "local-farm.png",
+    "membershipLevel": 1,
+    "description": "Fornecedor de produtos agrícolas frescos e locais."
+  },
+  {
+    "name": "Digital Marketing Pro",
+    "address": "404 Marketing St, Inovação Digital, SC",
+    "phone": "(48) 22222-3333",
+    "website": "https://www.digitalmarketingpro.com",
+    "image": "digital-marketing.png",
+    "membershipLevel": 3,
+    "description": "Consultoria especializada em estratégias de marketing digital."
+  }
+]
+  
