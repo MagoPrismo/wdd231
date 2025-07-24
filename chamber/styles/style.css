@@ -110,8 +110,8 @@ a {
     text-decoration: none;
     background-color: var(--color1);
     padding: 5px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     border-radius: 6px;
     font-family: var(--roboto);
     font-size: var(--h2);
@@ -123,6 +123,12 @@ hr {
 }
 
 /** blocks **/
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
 
 .navigation a:hover,
 .avigation a:active {
@@ -154,7 +160,7 @@ hr {
 }
 
 .button {
-    width: 70%;
+    width: 100%;
     justify-self: center;
     text-align: center;
 }
@@ -196,11 +202,6 @@ hr {
 
 /** cards **/
 
-.courses {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
 .card, .filter {
 
     background-color: var(--color1);
@@ -237,8 +238,7 @@ hr {
 
 #hero {
     display: block;
-    width: 90%;
-    height:auto;
+    width: 100%;
 }
 
 #sociallinks img {
