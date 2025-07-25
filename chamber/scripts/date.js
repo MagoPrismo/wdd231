@@ -25,4 +25,34 @@ if (screenSize <= 500) {
 
 //population
 
-s
+async function getMember() {
+    try {
+        const answer = await fetch('data/members.json');
+
+        if (!answer.ok) {
+            throw new Error('Error while trying to get the file: ' + answer.status);
+        }
+
+        const data = await answer.json();
+        const container = document.getElementById('members');
+
+        data.forEach(member => {
+            const div = document.createElement('div');
+            div.classList.add('member');
+
+            div.innerHTML = `
+            <img src="images/${member.image}" alt="${member.name}">
+            <h3>${member.name}</h3>
+            <p><strong>Adress:</strong> ${member.address}</p>
+            <p><strong>Website:</strong> <a href="${member.website}" class="links">${member.website}</a></p>
+            `;
+
+            container.appendChild(div);
+        });
+
+    } catch (erro) {
+        console.error("Issue", erro);
+    }
+}
+
+getMember();
