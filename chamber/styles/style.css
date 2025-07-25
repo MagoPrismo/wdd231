@@ -125,43 +125,6 @@ hr {
 
 /** blocks **/
 
-.links {
-    font-size: 1rem;
-    color: black;
-    padding: 0;
-    border-radius: 0;
-    background-color:rgba(255, 255, 255, 0);
-}
-
-.member img{
-    width: 60%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 2px 2px 8px rgb(0, 0, 0);
-    margin: 10px;
-    align-self: center;
-}
-
-.member {
-    display: flex;
-    flex-flow: column;
-    text-align: start;
-    padding: 10px;
-    background-color: var(--color3);
-    border-radius: 6px;
-    box-shadow: 2px 2px 8px rgb(0, 0, 0);
-}
-
-#members {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-#name {
-    text-align: center;
-}
-
 .hero {
     display: grid;
     grid-template-columns: 1fr;
@@ -246,16 +209,91 @@ hr {
     padding: 15px;
 }
 
-/** cards **/
+.navigation2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
 
-.card, .filter {
+.button2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
 
-    background-color: var(--color1);
-    color:rgb(255, 255, 255);
-    text-align: center;
-    padding: 5px;
-    margin: 5px;
+button {
+    
+}
+
+/** population **/
+
+.links {
+    font-size: 1rem;
+    color: black;
+    padding: 0;
+    border-radius: 0;
+    background-color:rgba(255, 255, 255, 0);
+}
+
+.member img{
+    width: 60%;
+    height: auto;
     border-radius: 6px;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
+    margin: 10px;
+    align-self: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    
+    .member {
+        display: flex;
+        flex-flow: column;
+        text-align: start;
+        padding: 10px;
+        background-color: var(--color3);
+        border-radius: 6px;
+        box-shadow: 2px 2px 8px rgb(0, 0, 0);
+    }
+
+    #name {
+        text-align: center;
+    }
+}
+
+.list {
+    display: flex;
+    flex-flow: column;
+
+    .member img {
+        display: none;
+    }
+
+    .member {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 10px;
+        padding: 10px;
+        margin: 5px;
+    
+    }
+
+    #name {
+        text-align: start;
+    }
+    
+    .member:nth-child(odd) {
+        background-color: var(--color1);
+        color: var(--color3);
+    }
+    
+    .member:nth-child(even) {
+        background-color: var(--color3);
+        color: var(--color1);
+    }
 }
 
 #yellow {
@@ -275,7 +313,7 @@ hr {
     display: none;
 }
 
-#logo, #logo1 {
+#logo {
     width: 125px;
     height: auto;
     border-radius: 6px;
@@ -290,43 +328,6 @@ hr {
 #sociallinks img {
     width: 10%;
     height: auto;
-}
-
-#contactsection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 70%;
-}
-
-#map {
-    display: block;
-    width: 90%;
-    height: auto;
-    margin: 10px;
-    justify-self: center;
-}
-
-#submited {
-    display: flex;
-    flex-flow: column;
-    color:rgb(255, 255, 255);
-    padding: 15px;
-}
-
-#refer {
-    display: block;
-    margin: 20px;
-    font-size: small;
-    padding: 1%;
-    align-self: center;
-}
-
-#istock {
-    font-size: 0.75rem;
-    padding-left: 3%;
-    padding-right: 3%;
-    margin: 15px;
-    text-align: center;
 }
 
 @media screen and (max-width: 500px) {

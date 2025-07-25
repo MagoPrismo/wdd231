@@ -25,6 +25,8 @@ if (screenSize <= 500) {
 
 //population
 
+const container = document.getElementById('members');
+
 async function getMember() {
     try {
         const answer = await fetch('data/members.json');
@@ -34,7 +36,6 @@ async function getMember() {
         }
 
         const data = await answer.json();
-        const container = document.getElementById('members');
 
         data.forEach(member => {
             const div = document.createElement('div');
@@ -59,3 +60,18 @@ async function getMember() {
 }
 
 getMember();
+
+//second menu
+
+const gridbtn = document.querySelector('#grid');
+const listbtn = document.querySelector('#list');
+
+gridbtn.addEventListener('click', () => {
+    container.classList.add('grid');
+    container.classList.remove('list');
+});
+
+listbtn.addEventListener('click', () => {
+    container.classList.add('list');
+    container.classList.remove('grid');
+})
