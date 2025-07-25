@@ -60,7 +60,7 @@ header {
     align-items: center;
     justify-content: center; 
     color: white;
-    border-bottom: 5px solid var(--color3);
+    border-bottom: 5px solid var(--color2);
     padding: var(--pad15);
     margin: 50px;
     width: 100%;
@@ -78,7 +78,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: var(--pad10);
-    border-top: 5px solid var(--color2);
+    border-top: 5px solid var(--color3);
 }
 
 /** elements **/
@@ -134,8 +134,32 @@ hr {
 }
 
 .member img{
-    width: 45%;
+    width: 60%;
     height: auto;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
+    margin: 10px;
+    align-self: center;
+}
+
+.member {
+    display: flex;
+    flex-flow: column;
+    text-align: start;
+    padding: 10px;
+    background-color: var(--color3);
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
+}
+
+#members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#name {
+    text-align: center;
 }
 
 .hero {
@@ -148,6 +172,14 @@ hr {
 .avigation a:active {
     color: var(--color1);
     background-color: var(--color3);
+    transition: background-color 0.5s ease;
+    transition-delay: 0s;
+}
+
+.member a:hover,
+.member a:active {
+    text-decoration: underline;
+    color: var(--color1);
     transition: background-color 0.5s ease;
     transition-delay: 0s;
 }
@@ -372,4 +404,7 @@ hr {
         flex-flow: column;
     }
 
+    #members {
+        grid-template-columns: 1fr;
+    }
 }
