@@ -41,7 +41,7 @@ async function getMember() {
             div.classList.add('member');
 
             div.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name}">
+            <img src="${member.image}" alt="${member.name}">
             <h3>${member.name}</h3>
             <p><strong>Adress:</strong> ${member.address}</p>
             <p><strong>Website:</strong> <a href="${member.website}" class="links">${member.website}</a></p>
