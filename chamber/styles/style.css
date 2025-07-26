@@ -238,29 +238,30 @@ hr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    
-    .member {
-        display: flex;
-        flex-flow: column;
-        text-align: start;
-        padding: 10px;
-        background-color: var(--color3);
-        border-radius: 6px;
-        box-shadow: 2px 2px 8px rgb(0, 0, 0);
-    }
+}  
 
-    #name {
-        text-align: center;
-    }
-
-    .member a:hover,
-    .member a:active {
-        text-decoration: underline;
-        color: var(--color1);
-        transition: background-color 0.5s ease;
-        transition-delay: 0s;
-    }
+.list .member {
+    display: flex;
+    flex-flow: column;
+    text-align: start;
+    padding: 10px;
+    background-color: var(--color3);
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
 }
+
+.list #name {
+    text-align: center;
+}
+
+.list .member a:hover,
+.list .member a:active {
+    text-decoration: underline;
+    color: var(--color1);
+    transition: background-color 0.5s ease;
+    transition-delay: 0s;
+}
+
 
 .list {
     display: flex;
