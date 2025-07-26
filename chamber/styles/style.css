@@ -262,41 +262,40 @@ hr {
     transition-delay: 0s;
 }
 
-
 .list {
     display: flex;
     flex-flow: column;
+}
 
-    .member img {
-        display: none;
-    }
+.list .member img {
+    display: none;
+}
 
-    .member {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 10px;
-        padding: 10px;
-        margin: 5px;
-        align-items: center;
-    }
+.list .member {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    padding: 10px;
+    margin: 5px;
+    align-items: center;
+}
 
-    #name {
-        text-align: start;
-    }
-    
-    .member:nth-child(odd) {
-        background-color: var(--color1);
-        color: var(--color3);
+.list #name {
+    text-align: start;
+}
 
-        .links {
-            color: white;
-        }
+.list .member:nth-child(odd) {
+    background-color: var(--color1);
+    color: var(--color3);
+
+    .links {
+        color: white;
     }
-    
-    .member:nth-child(even) {
-        background-color: var(--color3);
-        color: var(--color1);
-    }
+}
+
+.list .member:nth-child(even) {
+    background-color: var(--color3);
+    color: var(--color1);
 }
 
 #yellow {
@@ -415,13 +414,10 @@ hr {
     #members {
         grid-template-columns: 1fr;
     }
-
-    .list {
         
-        .member {
-            display: flex;
-            flex-flow: column;
-            align-items: start;
-        }
+    .list .member {
+        display: flex;
+        flex-flow: column;
+        align-items: start;
     }
 }
