@@ -289,7 +289,7 @@ hr {
     color: var(--color3);
 }
 
-.list .links {
+.list .member:nth-child(odd) .links {
     color: white;
 }
 
