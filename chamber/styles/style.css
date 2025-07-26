@@ -238,9 +238,9 @@ hr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-}  
+}   
 
-.list .member {
+.grid .member {
     display: flex;
     flex-flow: column;
     text-align: start;
@@ -250,12 +250,12 @@ hr {
     box-shadow: 2px 2px 8px rgb(0, 0, 0);
 }
 
-.list #name {
+.grid #name {
     text-align: center;
 }
 
-.list .member a:hover,
-.list .member a:active {
+.grid .member a:hover,
+.grid .member a:active {
     text-decoration: underline;
     color: var(--color1);
     transition: background-color 0.5s ease;
