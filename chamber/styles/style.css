@@ -132,17 +132,11 @@ hr {
 }
 
 .navigation a:hover,
-.avigation a:active {
+.avigation a:active,
+.button2 a:hover,
+.button2 a:active {
     color: var(--color1);
     background-color: var(--color3);
-    transition: background-color 0.5s ease;
-    transition-delay: 0s;
-}
-
-.member a:hover,
-.member a:active {
-    text-decoration: underline;
-    color: var(--color1);
     transition: background-color 0.5s ease;
     transition-delay: 0s;
 }
@@ -221,10 +215,6 @@ hr {
     gap: 5px;
 }
 
-button {
-    
-}
-
 /** population **/
 
 .links {
@@ -262,6 +252,14 @@ button {
     #name {
         text-align: center;
     }
+
+    .member a:hover,
+    .member a:active {
+        text-decoration: underline;
+        color: var(--color1);
+        transition: background-color 0.5s ease;
+        transition-delay: 0s;
+    }
 }
 
 .list {
@@ -278,7 +276,7 @@ button {
         grid-column-gap: 10px;
         padding: 10px;
         margin: 5px;
-    
+        align-items: center;
     }
 
     #name {
@@ -288,6 +286,10 @@ button {
     .member:nth-child(odd) {
         background-color: var(--color1);
         color: var(--color3);
+
+        .links {
+            color: white;
+        }
     }
     
     .member:nth-child(even) {
@@ -298,6 +300,10 @@ button {
 
 #yellow {
     color: var(--color3);
+}
+
+#grid, #list {
+    align-self: center;
 }
 
 #menu {
@@ -407,5 +413,14 @@ button {
 
     #members {
         grid-template-columns: 1fr;
+    }
+
+    .list {
+        
+        .member {
+            display: flex;
+            flex-flow: column;
+            align-items: start;
+        }
     }
 }
