@@ -293,7 +293,6 @@ hr {
     color: white;
 }
 
-
 .list .member:nth-child(even) {
     background-color: var(--color3);
     color: var(--color1);
