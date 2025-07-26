@@ -287,11 +287,12 @@ hr {
 .list .member:nth-child(odd) {
     background-color: var(--color1);
     color: var(--color3);
-
-    .links {
-        color: white;
-    }
 }
+
+.list .links {
+    color: white;
+}
+
 
 .list .member:nth-child(even) {
     background-color: var(--color3);
