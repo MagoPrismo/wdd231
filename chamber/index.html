@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home Page</title>
     <meta name="description" content="WDD 231 - Web Frontend Development I - Silas Gomes - Chamber of Commerce: This page has the purpose to present the local companies, and to connect them.">
     <meta name="author"  content="Silas Gomes Neto">
     <!--facebook meta-->
@@ -16,11 +16,14 @@
     <!---fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
     <!--css and js-->
     <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/date.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/base.js" defer></script>
     <!--favicon-->
     <link rel="icon" href="images/favicon.ico">
 </head>
@@ -36,29 +39,49 @@
             <a class="button" id="discover" href="#">Discover</a>
             <a class="button" id="Directory" href="directory.html">Directory</a>
             <a class="button" id="join" href="#">Join</a>
+            <a class="button" id="about" href="#">About</a>
+            <a class="button" id="podcast" href="#">PodCast</a>
+            <a class="button" id="events" href="#">Events</a>
         </nav>
     </header>
     <main>
         <div class="hero">
             <img id="hero" src="images/hero.webp" alt="heroimg">
+            <a id="call" href="#">Join Us!</a>
+        </div>
+        <h1>Home</h1>
+        <div class="events_weather">
+            <div class="block1">
+                <h2>Events</h2>
+
+            </div>
+            <div class="block1">
+                <h2>Current Weather</h2>
+                <div class="blocks" id="weather"></div>
+            </div>
+            <div class="block1">
+                <h2>Weather Forecast</h2>
+                <div id="forecast"></div>
+            </div>
+        </div>
+        <div class="blocks">
+            <div id="members" class="grid"></div>
         </div>
     </main>
     <footer>
         <div class="block">
             <div class="contact">
                 <p id="yellow"><strong>Valparaiso GO - Chamber of Commerce</strong></p>
-                <p class="foot">Rua Desembargador Dr. José Dilermando Meireles <br> Av. Central Norte s/n, Cidade Jardins</p>
+                <p class="foot">R. Desembargador Dr. José Dilermando Meireles <br> Av. Central Norte s/n, Cidade Jardins</p>
                 <p class="foot">+55 (61) 3627-8953</p>
-                <p class="foot">prefeitura@valparaisodegoias.go.gov.br</p>
             </div>
             <div class="socialdiv">
-                <a id="git" href="https://github.com/MagoPrismo"><img src="images/git.png" class="social" alt="git"></a>
-                <a id="insta" href="https://www.instagram.com/silasneto_gomes/"><img src="images/insta.png" class="social" alt="insta"></a>
-                <a id="face" href="https://m.facebook.com/silas.gms/"><img src="images/face.png" class="social" alt="face"></a>
+                <a id="git" href="https://github.com/MagoPrismo"><img src="images/git.webp" class="social" alt="git"></a>
+                <a id="insta" href="https://www.instagram.com/silasneto_gomes/"><img src="images/insta.webp" class="social" alt="insta"></a>
+                <a id="face" href="https://m.facebook.com/silas.gms/"><img src="images/face.webp" class="social" alt="face"></a>
             </div>
             <div class="student">
                 <p class="foot">WDD231 BYU Project</p>
-                <p class="foot">Silas Gomes Netos</p>
                 <p class="foot">&copy; <span id="year"></span> | Silas Gomes | Brazil</p>
                 <p class="foot">Last update:&nbsp;<span id="lastModified"></span></p>
                 <!--
@@ -71,3 +94,4 @@
     </footer>
 </body>
 </html>
+

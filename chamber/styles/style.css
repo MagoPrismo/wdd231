@@ -124,6 +124,7 @@ hr {
 /** blocks **/
 
 .hero {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
@@ -132,7 +133,9 @@ hr {
 .navigation a:hover,
 .avigation a:active,
 .button2 a:hover,
-.button2 a:active {
+.button2 a:active,
+.hero a:hover,
+.hero a:active {
     color: var(--color1);
     background-color: var(--color3);
     transition: background-color 0.5s ease;
@@ -213,6 +216,42 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
+}
+
+.events_weather {
+    display: grid;
+    grid-template-columns: .6fr .2fr .2fr;
+    gap: 10px;
+}
+
+.block1 h2 {
+    background-color: var(--color3);
+    text-align: start;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.cap {
+    text-transform: capitalize;
+}
+
+.blocks {
+    margin: 10px;
+}
+
+.block1 {
+    background-color:#1fb26181;
+    padding: 3px;
+    border-radius: 6px;
+}
+
+#Wimg {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#weather img {
+    justify-self: center;
 }
 
 /** population **/
@@ -329,6 +368,14 @@ hr {
 #hero {
     display: block;
     width: 100%;
+}
+
+#call {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 30px 10px 30px;
 }
 
 #sociallinks img {
