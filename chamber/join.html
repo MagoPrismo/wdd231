@@ -47,7 +47,7 @@
         <h1>Join Us!</h1>
         <div id="joinus">
             <div id="info">
-                <form id="myForm" action="/submit" method="post">
+                <form id="myForm" action="thankyou.html" method="get">
                     <h2>Membership Application Form</h2>
                     <input type="hidden" id="timestamp" name="timestamp">
                     <div class="box1">
@@ -127,7 +127,7 @@
                     <a href="#gold-modal" class="open-modal">See Benefits</a>
                 </div>
 
-                  <!-- 💬 Modals -->
+                <!-- Modals -->
                 <div id="bronze-modal" class="modal">
                     <div class="modal-content">
                     <span class="close">&times;</span>
@@ -228,6 +228,17 @@
             });
         });
         });
+
+        const firstname = document.getElementById("firstname").value;
+        const lastname = document.getElementById("lastname").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const name = document.getElementById("name").value;
+
+        localStorage.setItem("userName", firstname + lastname);
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userPhone", phone);
+        localStorage.setItem("companyName", companyname);
       </script>      
 </body>
 </html>
