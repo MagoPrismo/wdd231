@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us -The page to join the commerce</title>
+    <meta name="description" content="WDD 231 - Web Frontend Development I - Silas Gomes - Chamber of Commerce (Join Us page): This page has the purpose to apply new members for the chamber of commerce.">
+    <meta name="author"  content="Silas Gomes Neto">
+    <!--facebook meta-->
+    <meta property="og:title" content="Valparaiso de Goias Chamber of Commerce">
+    <meta property="og:description" content="Supporting local businesses and promoting economic growth in Valparaíso de Goiás. Join us to network, find resources, and build a stronger community.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/MagoPrismo/wdd231/refs/heads/main/val.png">
+    <meta property="og:url" content="https://magoprismo.github.io/wdd231/chamber/directory.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <!---fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--css and js-->
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/base.js" defer></script>
+    <!--favicon-->
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <header id="menu">
+        <img id="logo" src="images/logo.webp" alt="logo" loading="lazy">
+        <div id="humbutton">
+            <h1 id="title">Valparaiso GO - Chamber of Commerce</h1>
+            <a id="hidden-menu" href="#"></a>
+        </div>
+        <nav class="navigation">
+            <a class="button" id="home" href="index.html">Home</a>
+            <a class="button" id="discover" href="#">Discover</a>
+            <a class="button" id="Directory" href="directory.html">Directory</a>
+            <a class="button" id="join" href="join.html">Join</a>
+            <a class="button" id="about" href="#">About</a>
+            <a class="button" id="podcast" href="#">PodCast</a>
+            <a class="button" id="events" href="#">Events</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Join Us!</h1>
+        <div id="joinus">
+            <div id="info">
+                <form id="myForm" action="/submit" method="post">
+                    <h2>Membership Application Form</h2>
+                    <input type="hidden" id="timestamp" name="timestamp">
+                    <div class="box1">
+                        <label for="firstName">First Name:</label>
+                        <input name="firstName" id="firstName" type="text" autocomplete="first-name" placeholder="John" required>    
+                    </div>
+                    <div class="box1">
+                        <label for="lastName">Last Name:</label>
+                        <input name="lastName" id="lastName" type="text" autocomplete="last-name" placeholder="Wick" required> 
+                    </div>
+                    <div class="box1">
+                        <label for="organizational">Title</label>
+                        <input name="organizational" id="organizational" type="text" autocomplete="organization-title" placeholder="Company" pattern="[A-Za-z\- ]{7,}">
+                    </div>
+                    <div class="box1">
+                        <label for="email">Email:</label>
+                        <input name="email" id="email" type="email" autocomplete="email" required placeholder="John@gmail.com">
+                    </div>
+                    <div class="box1">
+                        <label for="phone">Mobile Phone Number:</label>
+                        <input name="phone" id="phone" type="tel" autocomplete="phone" placeholder="123-456-7890" required>
+                    </div>
+                    <div class="box1">
+                        <label for="name">Business/Organization's Name</label>
+                        <input name="name" id="name" type="text" autocomplete="organization" placeholder="Company's Name" required>
+                    </div>
+                    <div class="box1">
+                        <label for="description">Business/Organization's Description</label>
+                        <textarea name="description" id="description" rows="9" placeholder=" Type here..."></textarea>
+                    </div>
+                    
+                    <div id="ratio">
+                        <h3>Member Level</h3>
+                        <div class="radios">
+                            <input name="level" id="non" type="radio">
+                            <label>Non Profit Membership</label>
+                        </div>
+                        
+                        <div class="radios">
+                            <input name="level" id="bronze" type="radio" name="level">
+                            <label>Bronze Membership</label>
+                        </div>
+
+                        <div class="radios">
+                            <input name="level" id="silver" type="radio" name="level">
+                            <label>Silver Membership</label>
+                        </div>
+
+                        <div class="radios">
+                            <input name="level" id="gold" type="radio" name="level">
+                            <label>Gold Membership</label>
+                        </div>  
+                    </div>
+                    <div id="submit">
+                        <input type="submit" value="Apply for Membership" class="submit-btn">
+                    </div>
+                </form>
+            </div>
+            <div id="levels">
+                <h2>Membership Level</h2>
+                <div class="box2">
+                    <h2>Non Profit Membership Level</h2>
+                </div>
+
+                <div class="box2">
+                    <h2>Bronze Membership Level</h2>
+                </div>
+
+                <div class="box2">
+                    <h2>Silver Membership Level</h2>
+                </div>
+
+                <div class="box2">
+                    <h2>Gold Membership Level</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="block">
+            <div class="contact">
+                <p id="yellow"><strong>Valparaiso GO - Chamber of Commerce</strong></p>
+                <p class="foot">R. Desembargador Dr. José Dilermando Meireles <br> Av. Central Norte s/n, Cidade Jardins</p>
+                <p class="foot">+55 (61) 3627-8953</p>
+            </div>
+            <div class="socialdiv">
+                <a id="git" href="https://github.com/MagoPrismo"><img src="images/git.webp" class="social" alt="git"></a>
+                <a id="insta" href="https://www.instagram.com/silasneto_gomes/"><img src="images/insta.webp" class="social" alt="insta"></a>
+                <a id="face" href="https://m.facebook.com/silas.gms/"><img src="images/face.webp" class="social" alt="face"></a>
+            </div>
+            <div class="student">
+                <p class="foot">WDD231 BYU Project</p>
+                <p class="foot">&copy; <span id="year"></span> | Silas Gomes | Brazil</p>
+                <p class="foot">Last update:&nbsp;<span id="lastModified"></span></p>
+                <!--
+                <a class="foot" href="https://www.flaticon.com/br/icones-gratis/github" title="github ícones">Github ícones criados por Freepik - Flaticon</a>
+                <a class="foot" href="https://www.flaticon.com/br/icones-gratis/logotipo-do-instagram" title="logotipo do instagram ícones">Logotipo do instagram ícones criados por Rakib Hassan Rahim - Flaticon</a>
+                <a class="foot" href="https://www.flaticon.com/br/icones-gratis/facebook" title="facebook ícones">Facebook ícones criados por Freepik - Flaticon</a>
+                -->
+            </div>
+        </div>
+    </footer>
+    <script>
+          window.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#levels').classList.add('animation');
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const timestampField = document.getElementById('timestamp');
+          const now = new Date().toISOString();
+          
+          timestampField.value = now;
+        });
+      </script>      
+</body>
+</html>
