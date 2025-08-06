@@ -47,7 +47,7 @@
         <h1>Join Us!</h1>
         <div id="joinus">
             <div id="info">
-                <form id="myForm" action="thankyou.html" method="get">
+                <form id="myForm">
                     <h2>Membership Application Form</h2>
                     <input type="hidden" id="timestamp" name="timestamp">
                     <div class="box1">
@@ -228,7 +228,8 @@
             });
         });
         });
-
+        document.getElementById("myForm").addEventListener("submit", function (e) {
+        e.preventDefault();
         const firstname = document.getElementById("firstname").value;
         const lastname = document.getElementById("lastname").value;
         const email = document.getElementById("email").value;
@@ -239,6 +240,9 @@
         localStorage.setItem("userEmail", email);
         localStorage.setItem("userPhone", phone);
         localStorage.setItem("companyName", companyname);
+
+        window.location.href = "thankyou.html";
+        });
       </script>      
 </body>
 </html>
