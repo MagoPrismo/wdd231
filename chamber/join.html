@@ -114,14 +114,50 @@
 
                 <div class="box2">
                     <h2>Bronze Membership Level</h2>
+                    <a href="#bronze-modal" class="open-modal">See Benefits</a>
                 </div>
 
                 <div class="box2">
                     <h2>Silver Membership Level</h2>
+                    <a href="#silver-modal" class="open-modal">See Benefits</a>
                 </div>
 
                 <div class="box2">
                     <h2>Gold Membership Level</h2>
+                    <a href="#gold-modal" class="open-modal">See Benefits</a>
+                </div>
+
+                  <!-- 💬 Modals -->
+                <div id="bronze-modal" class="modal">
+                    <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Bronze Membership</h2>
+                    <p>Access to basic content and community forums.</p>
+                    </div>
+                </div>
+
+                <div id="silver-modal" class="modal">
+                    <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Silver Membership</h2>
+                    <p>Includes Bronze benefits + monthly newsletter and webinars.</p>
+                    </div>
+                </div>
+
+                <div id="gold-modal" class="modal">
+                    <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Gold Membership</h2>
+                    <p>Everything in Silver + premium content and priority support.</p>
+                    </div>
+                </div>
+
+                <div id="platinum-modal" class="modal">
+                    <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Platinum Membership</h2>
+                    <p>All benefits + 1-on-1 coaching and lifetime access.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -160,6 +196,37 @@
           const now = new Date().toISOString();
           
           timestampField.value = now;
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+        const links = document.querySelectorAll(".open-modal");
+        const modals = document.querySelectorAll(".modal");
+        const closeButtons = document.querySelectorAll(".close");
+
+        links.forEach(link => {
+            link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href");
+            const modal = document.querySelector(targetId);
+            if (modal) {
+                modal.style.display = "flex";
+            }
+            });
+        });
+
+        closeButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+            btn.closest(".modal").style.display = "none";
+            });
+        });
+
+        window.addEventListener("click", (e) => {
+            modals.forEach(modal => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+            });
+        });
         });
       </script>      
 </body>
