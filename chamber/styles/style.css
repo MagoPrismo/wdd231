@@ -213,7 +213,7 @@ input[type=email] {
 }
 
 .social {
-    width:35px;
+    width: 60%;
     height: auto;
 }
 
@@ -491,7 +491,7 @@ input[type=submit] {
 }
 
 #logo {
-    width: 100%;
+    width: 90%;
     height: auto;
     border-radius: 6px;
     text-align: center;
