@@ -439,6 +439,13 @@ font-size: 24px;
 cursor: pointer;
 }
 
+.radios {
+    display: flex;
+    flex-flow: wrap row;
+    gap: 10px;
+}
+
+
 #levels {
     opacity: 0;
     transform: translateY(20px);
