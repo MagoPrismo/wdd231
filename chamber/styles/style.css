@@ -125,6 +125,7 @@ form {
     display: flex;
     flex-flow: column;
     gap: 15px;
+    min-height: 600px;
 }
 
 label {
