@@ -230,16 +230,18 @@
         });
         document.getElementById("myForm").addEventListener("submit", function (e) {
         e.preventDefault();
-        const firstname = document.getElementById("firstname").value;
-        const lastname = document.getElementById("lastname").value;
+        const firstname = document.getElementById("firstName").value;
+        const lastname = document.getElementById("lastName").value;
         const email = document.getElementById("email").value;
         const phone = document.getElementById("phone").value;
         const name = document.getElementById("name").value;
+        const time = document.getElementById("timestamp").value;
 
-        localStorage.setItem("userName", firstname + lastname);
+        localStorage.setItem("userName", `${firstname}  ${lastname}`);
         localStorage.setItem("userEmail", email);
         localStorage.setItem("userPhone", phone);
-        localStorage.setItem("companyName", companyname);
+        localStorage.setItem("companyName", name);
+        localStorage.setItem("timestamp", time);
 
         window.location.href = "thankyou.html";
         });

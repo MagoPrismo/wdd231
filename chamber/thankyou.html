@@ -76,12 +76,14 @@
         const email = localStorage.getItem("userEmail");
         const phone = localStorage.getItem("userPhone");
         const company = localStorage.getItem("companyName");
+        const time = localStorage.getItem("timestamp");
     
         document.getElementById("userInfo").innerHTML = `
         <h3>We have received your information ${name}</h3>
         <p>Company Name: ${company}</p>
         <p>Email: ${email}</p>
         <p>Phone: ${phone}</p>
+        <p>Time: ${time}</p>
         `;
     
     </script>
