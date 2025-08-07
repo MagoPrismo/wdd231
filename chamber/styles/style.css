@@ -148,8 +148,8 @@ input[type=email] {
 }
 
 input[type="radio"] {
-    width: 17px;
-    height: 17px;
+    width: 24px;
+    height: 24px;
   }
 
 /** blocks **/
@@ -533,6 +533,11 @@ input[type=submit] {
     text-align: center;
 }
 
+#radio {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
 
 @media screen and (max-width: 500px) {
 
