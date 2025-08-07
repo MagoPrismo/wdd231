@@ -14,12 +14,19 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <!---fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Preload the fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap">
+
+    <!-- Load them asynchronously -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+
+    <!-- Fallback if JS is disabled -->
+    <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap">
+    </noscript>
     <!--css and js-->
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/date.js" defer></script>
@@ -29,7 +36,7 @@
 </head>
 <body>
     <header id="menu">
-        <img id="logo" src="images/logo.webp" alt="logo" loading="lazy">
+        <img id="logo" src="images/logo.webp" alt="logo" loading="lazy" width="85" height="85">
         <div id="humbutton">
             <h1 id="title">Valparaiso GO - Chamber of Commerce</h1>
             <a id="hidden-menu" href="#"></a>
@@ -62,9 +69,9 @@
                 <p class="foot">+55 (61) 3627-8953</p>
             </div>
             <div class="socialdiv">
-                <a id="git" href="https://github.com/MagoPrismo"><img src="images/git.webp" class="social" alt="git"></a>
-                <a id="insta" href="https://www.instagram.com/silasneto_gomes/"><img src="images/insta.webp" class="social" alt="insta"></a>
-                <a id="face" href="https://m.facebook.com/silas.gms/"><img src="images/face.webp" class="social" alt="face"></a>
+                <a id="git" href="https://github.com/MagoPrismo"><img src="images/git.png" class="social" alt="git" width="64" height="64"></a>
+                <a id="insta" href="https://www.instagram.com/silasneto_gomes/"><img src="images/insta.png" class="social" alt="insta" width="64" height="64"></a>
+                <a id="face" href="https://m.facebook.com/silas.gms/"><img src="images/face.png" class="social" alt="face" width="64" height="64"></a>
             </div>
             <div class="student">
                 <p class="foot">WDD231 BYU Project</p>
