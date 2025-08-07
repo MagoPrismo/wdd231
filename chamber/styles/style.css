@@ -269,6 +269,7 @@ input[type=email] {
     background-color:#1fb26181;
     padding: 3px;
     border-radius: 6px;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
 }
 
 #Wimg {
@@ -378,6 +379,7 @@ input[type=email] {
     margin: 0 auto;
     padding: 10% 0 10% 0;
     gap: 10px;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
 }
 
 .submit-btn {
@@ -389,6 +391,7 @@ input[type=email] {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
 }
 
 .submit-btn:hover, .open-modal:hover {
@@ -463,6 +466,7 @@ input[type=submit] {
     background-color: #1fb26127;
     padding: 10px;
     border-radius: 6px;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
 }
 
 #yellow {
