@@ -1,0 +1,135 @@
+/** global varibles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #c06f05;
+    --color2: #e8e8ee;
+    --color3: #71707536;
+    --rowdies: "Rowdies", sans-serif;
+    --roboto: "Roboto", sans-serif;
+    --open-sans: "Open Sans, sans-serif";
+    /* mobile view */
+    --h1: 2rem;
+    --h2: 1.5rem;
+    --p: 1rem;
+    --b: 1rem;
+    --pad5: 5px;
+    --pad10: 10px;
+    --pad15: 15px;
+    /* desktop view */
+    --pd: 0.615rem; 
+    --h2d: 1rem;
+
+}
+
+/** structure of html **/
+
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: var(--color2);
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--color1);
+    color: var(--color2);
+    padding: var(--pad15);
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    width: 90%;
+    padding: var(--pad10);
+    background-color: var(--color3);
+    border-radius: 6px;
+    margin: var(--pad10);
+}
+
+footer {
+    background-color: var(--color1);
+    color: var(--color2);
+    width: 100%;
+    text-align: center;
+    padding: var(--pad10);
+}
+
+/** elements **/
+
+h1 {
+    font-size: var(--h1);
+    font-family: var(--rowdies);
+}
+
+h2 {
+    font-size: var(--h2);
+    font-family: var(--roboto);
+}
+
+h3 {
+    font-size: var(--h3);
+    font-family: var(--roboto);
+}
+
+p {
+    font-size: var(--p);
+    font-family: var(--open-sans);
+}
+
+a {
+    color: rgb(13, 22, 150);
+}
+
+/** blocks **/
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: var(--pad15);
+    gap: 5px;
+}
+
+#header {
+    display: grid;
+    grid-template: 1fr 1fr / 0.1fr 0.9fr;
+    align-items: center;
+    gap: 10px;
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+    border-radius: 6px;
+    grid-row: 1 / span 2;
+}
+
+#subtitle {
+    padding: var(--pad10);
+}
+
+#t1 {
+    font-size: var(--h1);
+    font-family: var(--rowdies);
+}
+
+#t2 {
+    font-size: var(--h3);
+    font-family: var(--roboto);
+}
+
+#t3 {
+    font-size: var(--p);
+    font-family: var(--open-sans);
+}
+
+#wireframe {
+    width: 100%;
+    height: auto;
+}
