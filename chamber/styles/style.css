@@ -593,6 +593,11 @@ input[type=submit] {
     padding: 15px;
 }
 
+.place a:hover,
+.place a:active {
+    background-color: var(--color2);
+}
+
 @media screen and (max-width: 1024px) {
     #places {
         grid-template-columns: 1fr;

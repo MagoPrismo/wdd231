@@ -21,6 +21,7 @@ async function getPlaces() {
             <img class="Pimage" src="${place.imageUrl}" alt="${place.name}" loading="lazy" width="300" height="200">
             <p class="Padress">Adress: ${place.address}</p>
             <p class="Pdescription">Description: ${place.description}</p>
+            <a href="#">Learn More</a>
             `;
 
             container.appendChild(div);
