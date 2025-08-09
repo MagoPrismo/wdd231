@@ -547,7 +547,60 @@ input[type=submit] {
     gap: 10px;
 }
 
-@media screen and (max-width: 500px) {
+/* Cards */
+#places {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.place {
+    background-color: var(--color3);
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
+
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "image name"
+    "image address"
+    "image description";
+}
+
+.Pname {
+    grid-area: name;
+}
+
+.Pimage {
+    grid-area: image;
+    border-radius: 6px;
+}
+
+.Pdescription {
+    grid-area: description;
+}
+
+.Padress {
+    grid-area: address;
+}
+
+.Pimage:hover {
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
+}
+
+.sidebar {
+    padding: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+    #places {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 640px) {
 
     .button {
         font-size: 1.25rem;
@@ -636,5 +689,22 @@ input[type=submit] {
         display: flex;
         flex-flow: column;
         align-items: start;
+    }
+
+    .place {
+        grid-template-areas: 
+        "name"
+        "image"
+        "address"
+        "description";
+        position: start;
+    }
+
+    .Pimage {
+        justify-self: center;
+    }
+
+    .Pimage:hover {
+        box-shadow: none;
     }
 }
