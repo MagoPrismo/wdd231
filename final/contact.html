@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odessa Restaurant - Silas Gomes</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Silas Gomes - Contact page: This is a page for users make a reservation or get in touch with the restaurant.">
+    <meta name="author"  content="silas gomes neto">
+    <!---fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--the order matters-->
+    <link rel="stylesheet" href="/styles/odessa.css">
+    <!--js-->
+    <script src="/scripts/contact.js" defer></script>
+    <script src="/scripts/footer.js" defer></script>
+</head>
+<body>
+    <header id="menu">
+        <img id="logo" src="images/logo.jpeg" alt="logo">
+        <div id="humbutton">
+            <h1 id="title">Odessa | Bar & Restaurant</h1>
+            <a id="hidden-menu" href="#"></a>
+        </div>
+        <nav>
+            <ul class="navigation3">
+                <li><a class="button2" id="home" href="home.html">Home</a></li>
+                <li><a class="button2" id="cardapio" href="menu.html">Menu</a></li>
+                <li><a class="button2" id="contact" href="contact.html">Contact Us</a></li>
+            </ul>      
+        </nav>
+    </header>
+    <main id="contactsection">
+        <form action="submit.html" method="get">
+            <div id="leadinfo">
+                <h2>Send Us a message!</h2>
+                <hr>
+                <div id="leadinput">
+                    <div id="namemail">
+                        <div class="textinput">
+                            <label for="fullname">*Name: <input type="text" name="fullname" placeholder="Full Name" id="fullname" required></label>                            
+                        </div>
+                        <div class="textinput">
+                            <label for="email">*Email: <input type="email" name="email" placeholder="john@mail" id="email" required></label>                            
+                        </div>
+                    </div>
+                    <p class="subtitle">What's the topic of your message?</p>
+                    <div id="topic">
+                        <div class="radioinput">
+                            <input type="radio" name="mtype" id="reservetion">
+                            <label for="reservetion">Reservetion Question</label>
+                        </div>
+                        <div class="radioinput">
+                            <input type="radio" name="mtype" id="feedback">
+                            <label for="feedback">Feedback</label>
+                        </div>
+                        <div class="radioinput">
+                            <input type="radio" name="mtype" id="payment">
+                            <label for="payment">Payment</label>
+                        </div>
+                        <div class="radioinput">
+                            <input type="radio" name="mtype" id="help">
+                            <label for="help">Help</label>
+                        </div>
+                    </div>
+                    <div class="subtitle" id="dateBox">
+                        <label>Date of Reservation: <input type="date" name="installationdate"/></label>
+                    </div>
+                    <div id="textbox">
+                        <p class="subtitle">Text your message below!</p>
+                        <textarea name="message" id="message" rows="9" placeholder=" Type here..."></textarea>
+                    </div>
+                    <div id="button">
+                        <input type="submit" value="Send Message">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="contactinfo">
+            <div id="infosection">
+                <h2>Contact Information</h2>
+                <hr>
+                <div id="compinfo">
+                    <div class="infobox">
+                        <img src="images/phone.webp" alt="phone">
+                        <p>| +55 (63) 98424-5894</p>
+                    </div>
+                    <div class="infobox">
+                        <img src="images/mail.webp" alt="mail">
+                        <p>| Odessapalmas@email.com</p>
+                    </div>
+                    <div class="infobox">
+                        <img src="images/map.webp" alt="map">
+                        <p>| Quadra 1104 Sul Alameda 5 Lote 38, Palmas, Tocantins 77024028, Brazil</p>
+                    </div>
+                    <div id="iframe">
+                        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15704.459269999406!2d-48.335428167477595!3d-10.25232283785943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x933b347347c9a8f3%3A0xe6b540f0a6997ccb!2sQ.%201104%20Sul%20Alameda%205%2C%2038%20-%20Arse%2C%20Palmas%20-%20TO%2C%2077024-042!5e0!3m2!1spt-PT!2sbr!4v1750172328022!5m2!1spt-PT!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <hr>
+                    <div id="sociallinks">
+                        <a href="#" class="social">
+                            <img src="images/facebook.webp" alt="Facebook">
+                        </a>
+                        <a href="#" class="social">
+                            <img src="images/wx.webp" alt="X">
+                        </a>
+                        <a href="https://www.instagram.com/odessabr_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social">
+                            <img src="images/instagram.webp" alt="Instagram">
+                        </a>
+                    </div>
+                    <a href="refer.html" id="refer">Images References over here!</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p id="foot">&copy; <span id="year"></span> | Silas Gomes | Brazil</p>
+        <p id="date">Last update:&nbsp;<span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odessa Restaurant - Silas Gomes</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Silas Gomes - Submit page: This is a page to show users that theirs request was made.">
+    <meta name="author"  content="silas gomes neto">
+    <!---fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--the order matters-->
+    <link rel="stylesheet" href="/styles/odessa.css">
+    <!--js-->
+    <script src="/scripts/contact.js" defer></script>
+    <script src="/scripts/footer.js" defer></script>
+</head>
+<body>
+    <header id="menu">
+        <img id="logo" src="images/logo.jpeg" alt="logo">
+        <div id="humbutton">
+            <h1 id="title">Odessa | Bar & Restaurant</h1>
+            <a id="hidden-menu" href="#"></a>
+        </div>
+        <nav>
+            <ul class="navigation3">
+                <li><a class="button2" id="home" href="home.html">Home</a></li>
+                <li><a class="button2" id="cardapio" href="menu.html">Menu</a></li>
+                <li><a class="button2" id="contact" href="contact.html">Contact Us</a></li>
+            </ul>      
+        </nav>
+    </header>
+    <main id="submited">
+        <h1>Thank you for your Message!</h1>
+        <p>Your message has been sent succesfully. We'll respond to you soon!</p>
+        <p>Total messages completed by you: <span id="reviewCounter">0</span></p>
+    </main>
+    <script>
+        //counter//
+
+        function counter() {
+        const STORAGE_KEY = 'reviewsCompleted';
+
+        let reviewsCount = localStorage.getItem(STORAGE_KEY);
+
+        if (reviewsCount === null) {
+            reviewsCount = 0;
+        } else {
+            reviewsCount = parseInt(reviewsCount, 10);
+        }
+
+        reviewsCount++;
+
+        localStorage.setItem(STORAGE_KEY, reviewsCount);
+
+        document.getElementById('reviewCounter').textContent = reviewsCount;
+        }
+
+        counter();
+    </script>
+    <footer>
+        <p id="foot">&copy; <span id="year"></span> | Silas Gomes | Brazil</p>
+        <p id="date">Last update:&nbsp;<span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

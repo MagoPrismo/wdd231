@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odessa Restaurant - Silas Gomes</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Silas Gomes - Project: This is the menu page for a website of a restaurant. This page shows their offers and foods.">
+    <meta name="author"  content="silas gomes neto">
+    <!---fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--the order matters-->
+    <!--js and css-->
+    <link rel="stylesheet" href="styles/odessa.css">
+    <script src="/scripts/menu.js" defer></script>
+    <script src="/scripts/footer.js" defer></script>
+</head>
+<body>
+    <header id="menu">
+        <img id="logo" src="images/logo.jpeg" alt="logo">
+        <div id="humbutton">
+            <h1 id="title">Odessa | Bar & Restaurant</h1>
+            <a id="hidden-menu" href="#"></a>
+        </div>
+        <nav id="hidden-nav">
+            <div class="navigation2">
+                <a class="button2" id="home" href="home.html">Home</a>
+                <a class="button2" id="cardapio" href="menu.html">Menu</a>
+                <a class="button2" id="contact" href="contact.html">Contact Us</a>
+                <div class="filters">
+                    <a class="filter" id="salads" href="#">Salads</a>
+                    <a class="filter" id="sides" href="#">Sides</a>
+                    <a class="filter" id="meats" href="#">Meats</a>
+                    <a class="filter" id="fishes" href="#">Fish</a>
+                    <a class="filter" id="classics" href="#">Classic</a>
+                    <a class="filter" id="drinks" href="#">Drinks</a>
+                    <a class="filter" id="desserts" href="#">Desserts</a>
+                </div>
+            </div>    
+        </nav>
+    </header>
+    <main>
+        <div class="dishes">
+
+        </div>
+    </main>
+    <footer>
+        <p id="foot">&copy; <span id="year"></span> | Silas Gomes | Brazil</p>
+        <p id="date">Last update:&nbsp;<span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

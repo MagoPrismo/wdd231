@@ -1,0 +1,441 @@
+/** global varibles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #c06f05;
+    --color2: #e8e8ee;
+    --color3: #71707536;
+    --roboto: "Roboto", sans-serif;
+    --open-sans: "Open Sans, sans-serif";
+    /* mobile view */
+    --h1: 2rem;
+    --h2: 1.5rem;
+    --p: 1rem;
+    --b: 0.75rem;
+    --pad5: 5px;
+    --pad10: 10px;
+    --pad15: 15px;
+    /* desktop view */
+    --pd: 0.615rem; 
+    --h2d: 1rem;
+
+}
+
+/** structure of html **/
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../images/Gemini_Generated_Image_22aix922aix922ai.webp'); /* Altere o caminho se sua imagem estiver em outro lugar */
+    background-size: cover; /* Faz a i
+    magem cobrir toda a área do elemento */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Opcional: Faz a imagem permanecer fixa ao rolar a página */
+    background-color: rgba(0, 0, 0, 0.925);
+}
+
+body::before {
+    content: ''; /* Necessário para pseudo-elementos */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+    z-index: -1; /* Garante que o overlay fique atrás do conteúdo */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    color: white;
+    padding: var(--pad15);
+    margin: 50px;
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    width: 90%;
+}
+
+footer {
+    background-color: var(--color1);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
+    padding: var(--pad10);
+    border-top: 5px solid black;
+}
+
+/** elements **/
+
+h1 {
+    font-size: var(--h1);
+    font-family: var(--roboto);
+}
+
+h2 {
+    font-size: var(--h2);
+    font-family: var(--roboto);
+}
+
+h3 {
+    font-size: var(--h3);
+    font-family: var(--roboto);
+}
+
+p, label, input, input[type="date"],
+ input[type="submit"], textarea {
+    font-size: var(--p);
+    font-family: var(--roboto);
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: var(--color1);
+    padding: 5px;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 6px;
+    font-family: var(--roboto);
+    font-size: var(--h2);
+    text-align: center;
+}
+
+section {
+    background-color:rgba(255, 255, 255, 0.596);
+    display: flex;
+    flex-flow: column;
+    justify-self: center;
+    border-radius: 6px;
+    width: 80%;
+    height: auto;
+    padding: 10px;
+}
+
+form, #contactinfo {
+    margin: 10px;
+    padding: 15px;
+    background-color:rgba(255, 255, 255, 0.5);
+    color:rgb(0, 0, 0);
+    border-radius: 6px;
+}
+
+textarea {
+    display: block;
+    width: 90%;
+    margin: 10px;
+    border-radius: 6px;
+    justify-self: center;
+}
+
+input[type="submit"] {
+    width: 40%;
+    height: auto;
+    padding: 2% 2%;
+    background-color: var(--color1);
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: block;
+    text-align: center;
+    justify-self: center;
+    color:rgb(255, 255, 255);
+}
+
+hr {
+    margin: 1rem;
+}
+
+/** blocks **/
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: var(--pad15);
+    gap: 5px;
+}
+
+.navigation, .navigation2, .navigation3 {
+    list-style: none;
+    display: flex;
+    flex-flow: wrap column;
+    gap: 15px;
+}
+
+.navigation a:hover,
+.avigation a:active, 
+.navigation2 a:hover,
+.navigation2 a:active,
+.navigation3 a:hover,
+.navigation3 a:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+    color: var(--color1);
+    background-color:rgb(255, 255, 255);
+    transition: background-color 0.5s ease;
+    transition-delay: 0s;
+}
+
+.navigation2 {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+}
+
+.navigation3 {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+}
+
+.dishes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.social {
+    background: none;
+}
+
+.button {
+    display: block;
+    width: 30%;
+    justify-self: center;
+
+}
+
+.button2 {
+    display: block;
+    width: 90%;
+    justify-self: center;
+    text-align: center;
+}
+
+.subtitle {
+    font-weight: bold;
+}
+
+.infobox {
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    align-items: center;
+    font-weight: bold;
+}
+
+.filters {
+    display: flex;
+    flex-flow: wrap row;
+    grid-column: 1 /span 3;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.filter {
+    font-size: 1rem;
+    justify-self: center;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#imgmenu {
+    width: 100%;
+    height: auto;
+    align-self: center;
+    margin: 10px;
+    border-radius: 6px;
+}
+
+#menu {
+    background-color: var(--color1);
+    margin: 0;
+    display: grid;
+    grid-template: 0.5fr 0.5fr / 0.2fr 0.8fr;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 5px solid black;
+}
+
+#hidden-menu {
+    display: none;
+}
+
+#title {
+    font-size: 2rem;
+}
+
+#logo, #logo1 {
+    width: 125px;
+    height: auto;
+    border-radius: 6px;
+    grid-row: 1 /span 2;
+    justify-self: center;
+}
+
+#hero {
+    display: block;
+    width: 90%;
+    height:auto;
+}
+
+#foot, #date {
+    font-family: var(--roboto);
+    font-size: var(--b);
+}
+
+.infobox img {
+    width: 6%;
+}
+
+#sociallinks img {
+    width: 10%;
+    height: auto;
+}
+
+#contactsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+}
+
+#map {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 10px;
+    justify-self: center;
+}
+
+#submited {
+    display: flex;
+    flex-flow: column;
+    color:rgb(255, 255, 255);
+    padding: 15px;
+}
+
+#refer {
+    display: block;
+    margin: 20px;
+    font-size: small;
+    padding: 1%;
+    align-self: center;
+}
+
+#final {
+    color: white;
+    gap: 5px;
+}
+
+#istock {
+    font-size: 0.75rem;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin: 15px;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+
+    .button {
+        font-size: 1.25rem;
+        width: 50%;
+    }
+
+    .dishes {
+        display: flex;
+        flex-flow: wrap column;
+        align-items: center;
+    }
+
+    #menu {
+        grid-template-rows: 1fr; 
+        gap: 10px;
+    }
+
+    #humbutton {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #title {
+        font-size: 1.5rem;
+        align-self: center;
+        text-align: center;
+    }
+
+    .button2 {
+        font-size: 1.25rem;
+        text-align: left;
+    }
+
+    .filters {
+        justify-content: start;
+    }
+
+    #hidden-menu {
+        display: flex;
+    }
+
+    #logo {
+        width: 100%;
+        height: auto;
+        grid-row: 1;
+    }
+
+    #logo1 {
+        width: 50%;
+    }
+
+    #contactsection {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+    }
+
+    /** menu **/
+
+    .navigation2, .navigation3 {
+        display: none;
+    }
+
+    #hidden-menu::before {
+        content: "≡";
+        color: white;
+        font-size: 3rem;
+        font-family: var(--roboto);
+        justify-self: center;
+        align-self: center;
+    }
+
+    #hidden-menu.show::before {
+        content: "x";
+        font-family: var(--roboto);
+        font-size: 3rem;
+        justify-self: center;
+        align-self: center;
+    }
+
+
+    .show {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+}
