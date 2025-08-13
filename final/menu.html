@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odessa Restaurant - Silas Gomes</title>
-    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Silas Gomes - Project: This is the menu page for a website of a restaurant. This page shows their offers and foods.">
+    <meta name="description" content="WDD 231: Web Frontend Development - Silas Gomes - Project: This is the menu page for a website of a restaurant. This page shows their offers and foods.">
     <meta name="author"  content="silas gomes neto">
     <!---fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <!--the order matters-->
+    <!-- Preload the fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap">
+
+    <!-- Load them asynchronously -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+
+    <!-- Fallback if JS is disabled -->
+    <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap">
+    </noscript>
     <!--js and css-->
     <link rel="stylesheet" href="styles/odessa.css">
     <script src="/scripts/menu.js" defer></script>
