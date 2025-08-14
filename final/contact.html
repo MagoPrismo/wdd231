@@ -50,7 +50,7 @@
         </nav>
     </header>
     <main id="contactsection">
-        <form action="submit.html" method="get">
+        <form id="myForm" action="submit.html" method="get">
             <div id="leadinfo">
                 <h2>Send Us a message!</h2>
                 <hr>
@@ -136,5 +136,17 @@
         <p id="foot">&copy; <span id="year"></span> | Silas Gomes | Brazil</p>
         <p id="date">Last update:&nbsp;<span id="lastModified"></span></p>
     </footer>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const name = document.getElementById("fullname").value;
+        const email = document.getElementById("email").value;
+
+        localStorage.setItem("userName", name);
+        localStorage.setItem("userEmail", email);
+
+        window.location.href = "submit.html";
+        });
+    </script>
 </body>
 </html>

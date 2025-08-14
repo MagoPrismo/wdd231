@@ -49,33 +49,17 @@
             </ul>      
         </nav>
     </header>
-    <main id="submited">
-        <h1>Thank you for your Message!</h1>
-        <p>Your message has been sent succesfully. We'll respond to you soon!</p>
-        <p>Total messages completed by you: <span id="reviewCounter">0</span></p>
-    </main>
+    <main id="submited"></main>
     <script>
-        //counter//
+        const name = localStorage.getItem('userName');
+        const email = localStorage.getItem('userEmail');
 
-        function counter() {
-        const STORAGE_KEY = 'reviewsCompleted';
+        document.getElementById('submited').innerHTML = `
+        <h1>Thank you, ${name}, for your Message!</h1>
+        <p>Your message has been sent succesfully. We'll respond to you soon!</p>
+        <p>The email used is: ${email}</p>
+        `;
 
-        let reviewsCount = localStorage.getItem(STORAGE_KEY);
-
-        if (reviewsCount === null) {
-            reviewsCount = 0;
-        } else {
-            reviewsCount = parseInt(reviewsCount, 10);
-        }
-
-        reviewsCount++;
-
-        localStorage.setItem(STORAGE_KEY, reviewsCount);
-
-        document.getElementById('reviewCounter').textContent = reviewsCount;
-        }
-
-        counter();
     </script>
     <footer>
         <p id="foot">&copy; <span id="year"></span> | Silas Gomes | Brazil</p>
